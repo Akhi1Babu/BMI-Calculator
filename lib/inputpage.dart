@@ -41,7 +41,7 @@ class _InputPageState extends State<InputPage> {
           Expanded(
             child: reusable_card(
               kolor: resusableCardColor,
-              cardChild: Text(" "),
+              cardChild: Text("  "),
             ),
           ),
           Expanded(
