@@ -1,4 +1,10 @@
+import 'package:bmi_calculator/inputpage.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
+
+const bottomContainerHeight = 80.0;
+const resusableCardColor = Color(0xff1D1F33);
+const bottonContainerColor = Color(0xFFEA1556);
 
 void main() {
   runApp(BMICalulator());
@@ -22,71 +28,8 @@ class BMICalulator extends StatelessWidget {
   }
 }
 
-class InputPage extends StatefulWidget {
-  const InputPage({super.key});
 
-  @override
-  State<InputPage> createState() => _InputPageState();
-}
 
-class _InputPageState extends State<InputPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "BMI Calculator",
-        ),
-      ),
-      body: Column(
-        children: [
-          Expanded(
-            child: Row(
-              children: [
-                Expanded(
-                  child: reusable_card(kolor:  Color(0xff1D1F33),)
-                ),
-                Expanded(
-                  child: reusable_card(kolor: Color(0xff1D1F33),)
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            child: reusable_card(kolor:  Color(0xff1D1F33),),
-          ),
-           Expanded(
-            child: Row(
-              children: [
-                Expanded(
-                  child: reusable_card(kolor:  Color(0xff1D1F33),)
-                ),
-                Expanded(
-                  child: reusable_card(kolor:  Color(0xff1D1F33),)
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
 
-class reusable_card extends StatelessWidget {
-  late Color  kolor;
 
-  reusable_card({required this.kolor});
 
-  
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      
-      margin: EdgeInsets.all(15),
-      decoration: BoxDecoration(
-          color: kolor,
-          borderRadius: BorderRadius.circular(15)),
-    );
-  }
-}
