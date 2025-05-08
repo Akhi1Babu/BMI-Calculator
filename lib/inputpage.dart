@@ -12,6 +12,37 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  Color maleInactiveCardColor = inactiveCardColor;
+  Color femaleInactiveCardColor = inactiveCardColor;
+  void colorChange(int gender){//1- male.... 0- female
+  
+  if(gender==1){
+    if(maleInactiveCardColor==inactiveCardColor)
+   {
+    maleInactiveCardColor=resusableCardColor;
+    femaleInactiveCardColor=inactiveCardColor;
+  }
+  else{
+    maleInactiveCardColor=inactiveCardColor;
+  }
+  }
+
+  if(gender==0){
+    if(femaleInactiveCardColor==inactiveCardColor){
+
+   
+    femaleInactiveCardColor=resusableCardColor;
+    maleInactiveCardColor=inactiveCardColor;
+  }
+  else{
+    femaleInactiveCardColor=inactiveCardColor;
+  }
+  }
+  
+  
+
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,22 +57,39 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                    child: reusable_card(
-                  kolor: resusableCardColor,
-                  cardChild: iconDetails(iconimage: Icon(FontAwesomeIcons.mars),str: "male",),
-                )),
+                    child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        colorChange(1);
+                       
+                        
+                      });
+                    },
+                      child: reusable_card(
+                                        kolor: maleInactiveCardColor,
+                                        cardChild: iconDetails(iconimage: Icon(FontAwesomeIcons.mars),str: "male",),
+                                      ),
+                    )),
                 Expanded(
-                    child: reusable_card(
-                  kolor: resusableCardColor,
-                  cardChild: iconDetails(iconimage: Icon(FontAwesomeIcons.venus),str: "female",),
-                )),
+                    child: GestureDetector(
+                      onTap: (){
+                        setState(() {
+                          colorChange(0);
+                          
+                        });
+                      },
+                      child: reusable_card(
+                                        kolor: femaleInactiveCardColor,
+                                        cardChild: iconDetails(iconimage: Icon(FontAwesomeIcons.venus),str: "female",),
+                                      ),
+                    )),
               ],
             ),
           ),
           Expanded(
             child: reusable_card(
               kolor: resusableCardColor,
-              cardChild: Text("  "),
+              cardChild: Text(" "),
             ),
           ),
           Expanded(

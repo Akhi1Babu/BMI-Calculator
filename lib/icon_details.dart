@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+const str_style=TextStyle(
+            color: Color(0xFF8D8F9E),
+            fontSize: 18.0,
+          );
 class iconDetails extends StatelessWidget {
   late Icon iconimage;
   late String str;
@@ -16,10 +20,7 @@ class iconDetails extends StatelessWidget {
         ),
         Text(
           str,
-          style: TextStyle(
-            color: Color(0xFF8D8F9E),
-            fontSize: 18.0,
-          ),
+          style: str_style
         )
       ],
     );
