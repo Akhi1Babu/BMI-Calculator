@@ -2,10 +2,7 @@ import 'package:bmi_calculator/inputpage.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
 
-const bottomContainerHeight = 80.0;
-const resusableCardColor = Color(0xff1D1F33);
-const inactiveCardColor=Color(0xff111328);
-const bottonContainerColor = Color(0xFFEA1556);
+
 
 void main() {
   runApp(BMICalulator());
