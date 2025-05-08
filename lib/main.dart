@@ -18,7 +18,7 @@ class BMICalulator extends StatelessWidget {
           floatingActionButtonTheme:
               FloatingActionButtonThemeData(backgroundColor: Colors.green),
           appBarTheme:
-              AppBarTheme(backgroundColor: Color.fromARGB(255, 2, 2, 2)),
+              AppBarTheme(backgroundColor: Color.fromARGB(255, 18, 20, 24)),
           scaffoldBackgroundColor: Color(0xff090C1E)),
       debugShowCheckedModeBanner: false,
       home: InputPage(),
