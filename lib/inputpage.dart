@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/calculator.dart';
 import 'package:bmi_calculator/constants.dart';
 import 'package:bmi_calculator/icon_details.dart';
 import 'package:bmi_calculator/main.dart';
@@ -221,7 +222,16 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           bottomContainerWidget(text: "Calculate", onpressed: () {
-            Navigator.push(context,MaterialPageRoute(builder: (context)=>ResultScreen()));
+            
+        calculator calc=calculator(height: height,weight:weight);
+            Navigator.push(context,MaterialPageRoute(builder: (context)=>ResultScreen(
+              bmi_value: calc.calculatebmi(),
+          bmi_result: calc.getResult(),
+          
+          bmi_interpretation: calc.getInterpretation(),
+
+
+            )));
           }),
         ],
       ),
