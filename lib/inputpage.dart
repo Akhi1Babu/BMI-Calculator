@@ -220,21 +220,34 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          GestureDetector(
-            onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>ResultScreen()));
-            },
-            child: Container(
-              child: Center(child: Text("Calculate",style: kBottomContainerStyle,)),
-              margin: EdgeInsets.only(top: 10),
-              width: double.infinity,
-              height: bottomContainerHeight,
-              decoration: BoxDecoration(
-                color: kBottonContainerColor,
-              ),
-            ),
-          )
+          bottomContainerWidget(text: "Calculate", onpressed: () {
+            Navigator.push(context,MaterialPageRoute(builder: (context)=>ResultScreen()));
+          }),
         ],
+      ),
+    );
+  }
+}
+
+class bottomContainerWidget extends StatelessWidget {
+  final String text;
+  final VoidCallback onpressed;
+ bottomContainerWidget({required this.text,required this.onpressed});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: (){
+        onpressed();
+      },
+      child: Container(
+        child: Center(child: Text(text,style: kBottomContainerStyle,)),
+        margin: EdgeInsets.only(top: 10),
+        width: double.infinity,
+        height: bottomContainerHeight,
+        decoration: BoxDecoration(
+          color: kBottonContainerColor,
+        ),
       ),
     );
   }

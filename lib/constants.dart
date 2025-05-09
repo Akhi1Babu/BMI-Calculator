@@ -17,7 +17,7 @@ const kNumberStyle=TextStyle(
           );
 
        const kResultText=   TextStyle(
-            fontSize: 45,
+            fontSize: 41,
             fontWeight: FontWeight.bold,
           );
           const kNormalTextStyle=TextStyle(
@@ -26,6 +26,10 @@ const kNumberStyle=TextStyle(
             color: Color(0xFF37DC85),
           );
           const kLargeTextStyle=TextStyle(
-            fontSize: 100,
+            fontSize: 90,
+            fontWeight: FontWeight.bold,
+          );
+          const kInterpretationTextStyle=TextStyle(
+            fontSize: 20,
             fontWeight: FontWeight.bold,
           );
