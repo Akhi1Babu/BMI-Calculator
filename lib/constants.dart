@@ -15,3 +15,17 @@ const kNumberStyle=TextStyle(
             fontSize: 20.0,
             fontWeight: FontWeight.bold,
           );
+
+       const kResultText=   TextStyle(
+            fontSize: 45,
+            fontWeight: FontWeight.bold,
+          );
+          const kNormalTextStyle=TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+            color: Color(0xFF37DC85),
+          );
+          const kLargeTextStyle=TextStyle(
+            fontSize: 100,
+            fontWeight: FontWeight.bold,
+          );
